@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here
 from customer.models import Customer
 
@@ -22,7 +21,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100, null=True)
     description = models.CharField(max_length=500, null=True)
     price = models.FloatField(null=True)
-    category = models.CharField(max_length=30, null=True, choices=CATEGORY)
+    category = models.CharField(max_length=30, null=True, choices=CATEGORY) 
     date_created = models.DateTimeField(auto_now_add=True)
     tags = models.ManyToManyField(Tag)
 
