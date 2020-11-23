@@ -47,4 +47,3 @@ def delete_order(request, pk):
         return redirect('/')    
     context = {'order': order}
     return render(request, 'delete_order.html', context=context)
-
